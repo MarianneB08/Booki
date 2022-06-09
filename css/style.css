@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: 'Raleway', sans-serif;
-    margin: 0;
+    margin: 0 auto;
     font-size: normal;
 }
 
@@ -43,15 +43,19 @@ header {
     font-size: 1em;
 }
 
+/* Mise en place du logo Booki */
+
 .navbar img {
     width: 95px;
     height: auto;
 }
 
-#logo {
+.logo {
     align-self: center;
     padding-top: 10px;
 }
+
+/* Mise en place du menu de navigation */
 
 .navbar a {
     text-decoration: none;
@@ -60,7 +64,7 @@ header {
     margin-right: 10px;
 }
 
-#link_hebergements {
+.link_hebergements {
     margin-right: 30px;
 }
 
@@ -84,7 +88,9 @@ header {
     justify-content: space-around;
 }
 
-#slogan-search {
+/* Mise en place du slogan */
+
+.slogan-search {
     width: 100%;
 }
 
@@ -97,6 +103,8 @@ header {
     margin-left: 50px;
     line-height: 0.4;
 }
+
+/* Mise en place du formulaire de recherche */
 
 .form_location {
     display: flex;
@@ -124,7 +132,7 @@ header {
 }
 
 input::placeholder {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-family: 'Raleway';
 }
 
@@ -147,7 +155,7 @@ input::placeholder {
     height: 48.5px;
 }
 
-/* Filtres */
+/* Mise en place des filtres */
 
 .filters {
     display: flex;
@@ -160,12 +168,18 @@ input::placeholder {
     width: 850px;
 }
 
-.price_filter, .familial_filter, .romantic_filter, .pet_filter {
+.price_filter,
+.familial_filter,
+.romantic_filter,
+.pet_filter {
     display: flex;
     justify-content: space-between;
 }
 
-.price_icon, .familial_icon, .romantic_icon, .pet_icon {
+.price_icon,
+.familial_icon,
+.romantic_icon,
+.pet_icon {
     padding: 15px;
     height: 45px;
     width: 45px;
@@ -177,17 +191,26 @@ input::placeholder {
     justify-content: center;
 }
 
-.price_text, .familial_text, .romantic_text, .pet_text {
+.price_text,
+.familial_text,
+.romantic_text,
+.pet_text {
     padding-bottom: 10px;
     padding-top: 10px;
     align-self: center;
 }
 
-.fa-money-bill-wave, .fa-child-reaching, .fa-heart, .fa-dog {
+.fa-money-bill-wave,
+.fa-child-reaching,
+.fa-heart,
+.fa-dog {
     color: #0065FC;
 }
 
-.price_filter, .familial_filter, .romantic_filter, .pet_filter {
+.price_filter,
+.familial_filter,
+.romantic_filter,
+.pet_filter {
     border: 2px solid rgb(217, 217, 217);
     border-left: none;
     border-radius: 30px;
@@ -197,10 +220,15 @@ input::placeholder {
     align-items: center;
 }
 
-.price_filter:hover, .familial_filter:hover, .romantic_filter:hover, .pet_filter:hover {
+.price_filter:hover,
+.familial_filter:hover,
+.romantic_filter:hover,
+.pet_filter:hover {
     border: 2px dotted rgb(217, 217, 217);
     border-left: none;
 }
+
+/* Mise en place du message d'information */
 
 .info {
     display: flex;
@@ -243,7 +271,7 @@ input::placeholder {
         font-size: 1em;
     }
 
-    #logo {
+    .logo {
         align-self: center;
         margin-top: 20px;
     }
@@ -282,150 +310,72 @@ input::placeholder {
     }
 }
 
-/*Section 1*/
+/*Mise en place de la section 1*/
 
-/*Hébergements à Marseille*/
-
-.section_1 {
+.section_1{
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    width: 100%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
 }
 
-.hebergements_Marseille, .populaires {
-    background-color: #f2f2f2;
-    border-radius: 15px;
+.section_1 h2 {
+    font-size: 1.4vw;
+    margin-bottom: 4%;
 }
+
+
+/* Mise en place des cards hébergements de la section 1 */
 
 .hebergements_Marseille {
-    width: 60%;
-    height: 600px;
+    background-color: #f2f2f2;
+    margin-top: 2.5%;
+    padding: 25px 35px;
+    border-radius: 15px;
+    flex: 2;
+}
+
+.liste_hotels {
+    display: flex;
+    height: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.liste_hotels a {
     display: flex;
     flex-direction: column;
-    flex: 2;
-    margin-left: 50px;
-    margin-right: 20px;
-}
-
-.hebergements_liste {
     width: 100%;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: space-around;
-    margin-left: 20px;
-    margin-right: 20px;
-    align-self: center;
+    height: 200px;
 }
 
-.item_hebergement {
-    background:rgb(255, 255, 255);
+.card_hotel {
+    width: 30%;
+    height: 42%;
     border-radius: 15px;
+    background-color: rgb(255, 255, 255);
     box-shadow: 4px 4px 8px rgb(217, 217, 217);
-    padding: 5px;
-    height: auto;
-    width: auto;
-    margin-bottom: 15px;
+    padding: 4px;
 }
 
-.description_hebergement {
-    margin-left: 8px;
-    margin-bottom: 8px;
-    line-height: 0.5;
-}
-
-.imgcard1{
-    background-image: url("../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 230px;
-    height: 110px;
-    border-top-right-radius: 15px;
+.imgcard1, .imgcard2, .imgcard3, .imgcard4, .imgcard5, .imgcard6 {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
     border-top-left-radius: 15px;
-}
-
-.imgcard2{
-    background-image: url("../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 230px;
-    height: 110px;
     border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
 }
 
-.imgcard3{
-    background-image: url("../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 230px;
-    height: 110px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-.imgcard4{
-    background-image: url("../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 230px;
-    height: 110px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-.imgcard5{
-    background-image: url("../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 230px;
-    height: 110px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-.imgcard6{
-    background-image: url("../images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 230px;
-    height: 110px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-
-.section_1 h3, #section_2 h3{
-    font-size: 1em;
-}
-
-.hebergements_liste p, .populaires p {
-    font-size: 0.9em;
-}
-
-.section_1 h2, #section_2 h2 {
-    font-size: 1.3em;
-}
-
-.hebergements_Marseille h2{
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-bottom: 25px;
-}
-
-.more{
-    font-weight: 600;
-    font-size: 1.1em;
-    margin-left: 40px;
-    margin-bottom: 40px;
+.description_hotel {
+    margin-left: 5%;
+    font-size: 0.9vw;
+    line-height: 0.5vh;
+    margin-bottom: 3%;
+    margin-top: 0;
 }
 
 .fa-star {
-    font-size: 11px;
-    letter-spacing: 2px;
+    font-size: 0.9vw;
+    letter-spacing: 0.1vw;
     color: #0065FC;
 }
 
@@ -436,106 +386,98 @@ input::placeholder {
 .rating {
     display: flex;
     justify-content: space-between;
-    width: 40px;
+    width: 35%;
 }
 
-/*Les plus populaires*/
+.more {
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 10%;    
+}
+
+
+/*Les plus populaires (partie de droite de la section 1) */
+
+.hebergements_populaires {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-top: 2.5%;
+    padding: 2% 2.5%;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.titre_populaires {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
 
 .black-star {
     color: black;
-    font-size: 1.2em;
+    font-size: 1.3vw;
 }
 
-#contain_blackstar {
+.contain_blackstar {
     display: flex;
     align-items: center;
-    margin-left: 135px;
 }
 
-#titre_populaires {
+.x3cards{
     display: flex;
-    justify-content: space-between;
-    margin-left: 30px;
-}
-
-.populaires h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.populaires{
-    display: flex;
+    height: 90%;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    flex: 1;
-    margin-left: 20px;
-    padding-left: 20px;
-    margin-right: 50px;
-    width: 30%;
-    height: 600px;
+    justify-content: space-between;
 }
 
-.item_populaire {
+.card_populaire {
     display: flex;
-    justify-content: space-between;
-    width: 360px;
-    height: auto;
-    margin-left: 20px;
+    height: 145px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    box-shadow: 3px 3px 8px rgb(217, 217, 217);
+    box-shadow: 4px 4px 8px rgb(217, 217, 217);
     padding: 4px;
 }
 
-#imgcard7 {
-    background-image: url("../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 125px;
-    height: 137px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-#imgcard8{
-    background-image: url("../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 125px;
-    height: 137px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-#imgcard9{
-    background-image: url("../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 125px;
-    height: 137px;
+.imgcard7, .imgcard8, .imgcard9 {
+    width: 40%;
+    object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
 .description_populaire {
-    margin-right: 40px;
-    width: 170px;
+    font-size: 1vw;
+    margin-left: 6%;
+    margin-right: 4%;
 }
 
-.description_populaire p{
-    margin-top: 0;
-    margin-bottom: 50px;
+.price_and_rating{
+    height: 54%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .description_populaire h3{
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 3%;
+    width: 100%;
 }
 
-/* Section 2 */
+.description_populaire p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 10%;
+}
 
-#section_2 {
+
+/* Mise en place de la section 2 */
+
+.section_2 {
     display: flex;
     flex-direction: column;
     margin: 50px;
@@ -543,7 +485,7 @@ input::placeholder {
     height: auto;
 }
 
-#cards {
+.cards {
     display: flex;
     justify-content: space-between;
     width: 93%;
@@ -558,17 +500,18 @@ input::placeholder {
     border-radius: 15px;
     box-shadow: 5px 5px 5px rgb(217, 217, 217);
     width: 300px;
-    height: 430px;
+    height: auto;
 }
 
-.card_double{
+.card_double {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 
-.mini_card1, .mini_card4 {
+.mini_card1,
+.mini_card4 {
     display: flex;
     flex-direction: column;
     background: rgb(255, 255, 255);
@@ -576,36 +519,36 @@ input::placeholder {
     box-shadow: 5px 5px 8px rgb(217, 217, 217);
     width: 300px;
     height: 230px;
-    
+
 }
 
-.mini_card2, .mini_card3 {
+.mini_card2,
+.mini_card3 {
     display: flex;
     flex-direction: column;
     background: rgb(255, 255, 255);
     border-radius: 15px;
-    box-shadow: 5px 5px 8px rgb(217, 217, 217);
+    box-shadow: 0 0 8px rgb(217, 217, 217);
     width: 300px;
     height: 170px;
 }
 
-.card_simple h3, .card_double h3 {
+.card_simple h3,
+.card_double h3 {
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#imgcard10{
-    background-image: url(../images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
-    background-size: cover;
-    background-position: 60% 60%;
-    width: 300px;
-    height: 450px;
-    border-top-left-radius: 15px;
+.imgcard10,
+.imgcard13 {
+    width: 100%;
+    height: auto;
     border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
-#imgcard11{
+.imgcard11 {
     background-image: url(../images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
     background-size: cover;
     background-position: 70% 40%;
@@ -615,28 +558,18 @@ input::placeholder {
     border-top-right-radius: 15px;
 }
 
-#imgcard12{
+.imgcard12 {
     background-image: url(../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
     background-size: cover;
     background-position: 70% 30%;
     width: 300px;
     height: 170px;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;   
-
-}
-
-#imgcard13{
-    background-image: url(../images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
-    background-size: cover;
-    background-position: 40% 100%;
-    width: 300px;
-    height: 450px;
-    border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+
 }
 
-#imgcard14{
+.imgcard14 {
     background-image: url(../images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
     background-size: cover;
     background-position: 70% 10%;
@@ -646,7 +579,7 @@ input::placeholder {
     border-top-right-radius: 15px;
 }
 
-#imgcard15{
+.imgcard15 {
     background-image: url(../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
     background-size: cover;
     background-position: center;
@@ -664,8 +597,9 @@ footer {
     text-align: start;
     line-height: 1.8em;
     background-color: #f2f2f2;
-    padding-top: 40px;
+    padding-top: 25px;
     padding-bottom: 40px;
+    margin-top: 15px;
 }
 
 footer h2 {
@@ -673,18 +607,18 @@ footer h2 {
     margin-left: 40px;
 }
 
-#a_propos {
+.a_propos {
     margin-left: 20px;
     font-weight: 200;
 
 }
 
-#nos_hebergements, #assistance {
-    margin-left: 200px;
+.nos_hebergements,
+.assistance {
+    margin-left: 230px;
     font-weight: 200;
 }
 
 footer li {
     list-style-type: none;
 }
-
