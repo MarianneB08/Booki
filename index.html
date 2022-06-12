@@ -37,27 +37,23 @@
 
             <!-- Définition du slogan et du formulaire de recherche -->
 
-            <div class="slogan-search">
+            <div class="slogan_search">
 
                 <h1 class="slogan">Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p class="subtitle">En plein centre-ville ou en pleine nature</p>
 
+                <div class="form">
 
-                <div class="form_location">
+                    <div class="location_dot_container">
+                        <img src="images/icons/location-dot-solid.svg" alt="icône de localisation" class="location_dot_img" />                    </div>
 
-                    <div class="location_dot">
-                        <i class="fa-solid fa-lg fa-location-dot"></i>
-                    </div>
-
-                    <form method="post" action="traitement.php">
-                        <p>
+                    <form method="post" action="#">
                             <input class="search_input" type="search" name="city" placeholder="Marseille, France" />
-                        </p>
+                            <input class="search_button" type="button" value="Rechercher"/>
+                            <button class="magnifying-glass_container">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                     </form>
-
-                    <div class="blue_button">
-                        <input class="research_button" type="button" value="Rechercher" />
-                    </div>
 
                 </div>
 
