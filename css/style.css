@@ -9,16 +9,14 @@ html {
 }
 
 #bloc_page {
-    width: 100%;
-    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 body {
+    width: 100%;
     font-family: 'Raleway', sans-serif;
-    margin: 0 auto;
+    margin: 0;
     font-size: normal;
 }
 
@@ -29,14 +27,9 @@ a {
 
 /* Mise en forme du header */
 
-header {
-    width: 100%;
-}
-
 .navbar {
-    width: 90%;
-    height: 90px;
-    margin: auto;
+    height: 90px; /* permet de fixer la bordure supérieure des liens du menu tout à fait en haut de la page*/
+    margin: 0 50px 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,48 +38,86 @@ header {
 
 /* Mise en place du logo Booki */
 
-.navbar img {
-    width: 95px;
-    height: auto;
-}
-
-.logo {
-    align-self: center;
-    padding-top: 10px;
+.navbar_logo {
+    width: 75px;
+    padding-left: 10px;
 }
 
 /* Mise en place du menu de navigation */
 
-.navbar a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    margin-right: 10px;
-}
-
-.link_hebergements {
-    margin-right: 30px;
+.navbar ul {
+    display: flex;
+    padding-left: 0;
 }
 
 .navbar li {
     list-style-type: none;
 }
 
-.navbar a:hover {
+.nav_link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 29px;
+}
+
+.nav_link:hover {
     color: #0065FC;
     border-top: solid 2px #0065FC;
-    padding-top: 42px;
+    padding-top: 34px;
     margin-top: 0;
 }
 
-.navbar nav ul {
-    width: 290px;
-    height: 100px;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 0 30px 0;
+    }
+
+    .navbar_logo {
+        padding-left: 0px;
+    }
+
+    /* Mise en place du menu de navigation */
+
+    .navbar_nav {
+        display: flex;
+        width: 100%; 
+        margin-top: 30px;
+    }
+
+    .navbar nav ul {
+        /*display: flex;
+        justify-content: center;*/
+        flex: 1;
+        margin: 0;
+    }
+
+    .navbar li {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+        border-bottom: solid 3px #f2f2f2;
+    }
+
+    .navbar li:hover {
+        border-bottom: solid 3px #0065FC;
+    }
+
+    .nav_link {
+        padding: 0;
+    }
+
+    .nav_link:hover {
+        border-top: none;
+        padding: 0;
+    }
 }
+
 
 /* Mise en place du slogan */
 
@@ -95,11 +126,12 @@ header {
 }
 
 .slogan {
-    font-size: larger;
+    font-size: 1.2em;
     margin-left: 50px;
 }
 
 .subtitle {
+    font-size: 1em;
     margin-left: 50px;
     line-height: 0.4;
 }
@@ -111,7 +143,6 @@ header {
     align-items: center;
     margin-left: 50px;
     margin-top: 20px;
-    justify-content: flex-start;
 }
 
 .location_dot {
@@ -125,7 +156,7 @@ header {
     border: 1px solid #f2f2f2;
     font-family: 'Raleway';
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1em;
     width: 220px;
     height: 48.5px;
     padding-left: 15px;
@@ -142,17 +173,12 @@ input::placeholder {
     color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 1.1em;
-    width: 100px;
     box-shadow: none;
     border: none;
     height: 48.5px;
     width: 130px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-}
-
-.blue_button {
-    height: 48.5px;
 }
 
 /* Mise en place des filtres */
@@ -186,18 +212,13 @@ input::placeholder {
     margin-right: 15px;
     background: #DEEBFF;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .price_text,
 .familial_text,
 .romantic_text,
 .pet_text {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    align-self: center;
+    padding-bottom: 10px 0;
 }
 
 .fa-money-bill-wave,
@@ -224,7 +245,8 @@ input::placeholder {
 .familial_filter:hover,
 .romantic_filter:hover,
 .pet_filter:hover {
-    border: 2px dotted rgb(217, 217, 217);
+    border: 2px dotted #0065FC;
+    color: #0065FC;
     border-left: none;
 }
 
@@ -252,9 +274,10 @@ input::placeholder {
     color: #0065FC;
 }
 
+
 /*Mise en place de la section 1*/
 
-.section_1{
+.section_1 {
     display: flex;
     margin-left: 3.5%;
     margin-right: 3.5%;
@@ -299,7 +322,16 @@ input::placeholder {
     padding: 4px;
 }
 
-.imgcard1, .imgcard2, .imgcard3, .imgcard4, .imgcard5, .imgcard6 {
+.card_hotel:hover {
+    box-shadow: 4px 4px 8px #0065FC;
+}
+
+.imgcard1,
+.imgcard2,
+.imgcard3,
+.imgcard4,
+.imgcard5,
+.imgcard6 {
     width: 100%;
     height: 60%;
     object-fit: cover;
@@ -335,7 +367,7 @@ input::placeholder {
     font-size: 1.3vw;
     font-weight: bold;
     margin-top: 1%;
-    margin-bottom: 10%;    
+    margin-bottom: 10%;
 }
 
 
@@ -368,7 +400,7 @@ input::placeholder {
     align-items: center;
 }
 
-.x3cards{
+.x3cards {
     display: flex;
     height: 90%;
     flex-direction: column;
@@ -384,7 +416,9 @@ input::placeholder {
     padding: 4px;
 }
 
-.imgcard7, .imgcard8, .imgcard9 {
+.imgcard7,
+.imgcard8,
+.imgcard9 {
     width: 40%;
     object-fit: cover;
     border-top-left-radius: 15px;
@@ -397,14 +431,14 @@ input::placeholder {
     margin-right: 4%;
 }
 
-.price_and_rating{
+.price_and_rating {
     height: 54%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.description_populaire h3{
+.description_populaire h3 {
     margin-top: 10px;
     margin-bottom: 3%;
     width: 100%;
@@ -443,7 +477,7 @@ input::placeholder {
     margin-right: 4%;
 }
 
-.card_double{
+.card_double {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -454,16 +488,18 @@ input::placeholder {
     margin-right: 4%;
 }
 
-.mini_card1, .mini_card4 {
+.mini_card1,
+.mini_card4 {
     display: flex;
     flex-direction: column;
     background: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 5px 5px 8px rgb(217, 217, 217);
-    height: 53%; 
+    height: 53%;
 }
 
-.mini_card2, .mini_card3 {
+.mini_card2,
+.mini_card3 {
     display: flex;
     flex-direction: column;
     background: rgb(255, 255, 255);
@@ -477,7 +513,8 @@ input::placeholder {
     height: 100%;
 }
 
-.imgcard10, .imgcard13 {
+.imgcard10,
+.imgcard13 {
     width: 100%;
     height: 87%;
     object-fit: cover;
@@ -485,7 +522,8 @@ input::placeholder {
     border-top-left-radius: 15px;
 }
 
-.imgcard11, .imgcard15 {
+.imgcard11,
+.imgcard15 {
     width: 100%;
     height: 75%;
     object-fit: cover;
@@ -493,7 +531,8 @@ input::placeholder {
     border-top-left-radius: 15px;
 }
 
-.imgcard12, .imgcard14 {
+.imgcard12,
+.imgcard14 {
     width: 100%;
     height: 66%;
     object-fit: cover;
@@ -533,18 +572,4 @@ footer h2 {
 
 footer li {
     list-style-type: none;
-}
-
-
-
-/*Version tablette*/
-
-@media screen and (max-width: 992px) and (min-width: 769px) {
-    
-}
-
-/*Version mobile*/
-
-@media screen and (max-width: 768px) {
-    
 }
