@@ -700,7 +700,7 @@ input::placeholder {
 
     .contain_blackstar .black-star {
         font-size: 20px;
-        color:rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
     }
 
     /* Mobile - Section 1 - Hébergements à Marseille */
@@ -736,7 +736,7 @@ input::placeholder {
         margin-bottom: 3%;
         margin-top: 0;
     }
-    
+
     .fa-star {
         font-size: 11px;
         color: #0065FC;
@@ -764,7 +764,10 @@ input::placeholder {
 
 @media screen and (min-width: 510px) and (max-width: 768px) {
 
-    .hebergements_populaires, .hebergements_Marseille {
+    .hebergements_populaires,
+    .hebergements_Marseille,
+    .section_2,
+    .cards {
         width: 400px;
         margin: 0 auto;
     }
@@ -860,6 +863,63 @@ input::placeholder {
     border-top-left-radius: 15px;
 }
 
+@media screen and (max-width: 768px) {
+
+    .section_2 {
+        margin: 0;
+        padding: 20px;
+        width: 79%;
+    }
+
+    .section_2 h3 {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1360px;
+    }
+
+    .card_double {
+        justify-content: space-evenly;
+    }
+
+    .card_simple,
+    .card_double {
+        margin-right: 0;
+    }
+
+    .card_simple,
+    .mini_card1,
+    .mini_card2,
+    .mini_card3,
+    .mini_card4 {
+        height: 200px;
+        flex: none;
+    }
+
+    .imgcard10,
+    .imgcard11,
+    .imgcard12,
+    .imgcard13,
+    .imgcard14,
+    .imgcard15 {
+        height: 70%;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 768px) {
+
+    .section_2,
+    .cards {
+        width: 400px;
+        margin: 0 auto;
+        padding-right: 40px;
+    }
+}
+
 
 /* Mise en place du footer */
 
@@ -892,4 +952,30 @@ footer h2 {
 
 footer li {
     list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    footer {
+        width: 79%;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: start;
+        padding-bottom: 0;
+    }
+
+    .a_propos,
+    .nos_hebergements,
+    .assistance {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 768px) {
+
+    footer {
+        width: 400px;
+        margin: 0 auto;
+        padding-right: 40px;
+    }
 }
