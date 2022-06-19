@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-/* Éléments principaux de la page */
+/* ---------- ÉLÉMENTS PRINCIPAUX DE LA PAGE ---------- */
 
 html {
     width: 100%;
@@ -17,7 +17,7 @@ body {
     width: 100%;
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    font-size: normal;
+    font-size: 12px;
 }
 
 a {
@@ -25,26 +25,27 @@ a {
     color: rgb(0, 0, 0);
 }
 
-/* Mise en forme du header */
+/* ---------- HEADER ---------- */
+
+/* DESKTOP - HEADER - NAVBAR */
 
 .navbar {
     height: 90px;
-    /* permet de fixer la bordure supérieure des liens du menu tout à fait en haut de la page*/
     margin: 0 50px 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
-/* Mise en place du logo Booki */
+/* Logo Booki */
 
 .navbar_logo {
     width: 75px;
     padding-left: 10px;
 }
 
-/* Mise en place du menu de navigation */
+/* Menu de navigation */
 
 .navbar ul {
     display: flex;
@@ -68,13 +69,14 @@ a {
     margin-top: 0;
 }
 
-/* Responsive mobile - Partie supérieure du header (navbar) */
+/* RESPONSIVE MOBILE - HEADER - NAVBAR */
 
 @media screen and (max-width: 768px) {
 
-    /* Mise en place de la navbar et du logo */
+    /* Navbar et logo Booki */
 
     .navbar {
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -87,7 +89,7 @@ a {
         padding-left: 0px;
     }
 
-    /* Mise en place du menu de navigation */
+    /* Menu de navigation */
 
     .navbar_nav {
         display: flex;
@@ -126,42 +128,39 @@ a {
 }
 
 
-/* Desktop - Mise en place du slogan */
+/* DESKTOP - HEADER - SLOGAN */
 
 .slogan_search {
     width: 100%;
 }
 
 .slogan {
-    font-size: 1.2em;
+    font-size: 1.8em;
     margin-left: 50px;
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 1.3em;
     margin-left: 50px;
     line-height: 0.4;
 }
 
-/* Responsive mobile - Mise en place du slogan */
+/* RESPONSIVE MOBILE - HEADER - SLOGAN */
 
 @media screen and (max-width: 768px) {
 
     .slogan {
-        width: 100%;
-        font-size: 1.3em;
-        margin-left: 50px;
-        word-break: break-word;
+        /*width: 100%;
+        word-break: break-all;*/
         margin-left: 20px;
     }
 
     .subtitle {
-        font-size: 1.1em;
         margin-left: 20px;
     }
 }
 
-/* Desktop - Mise en place du formulaire de recherche */
+/* DESKTOP - HEADER - FORMULAIRE DE RECHERCHE */
 
 .form {
     display: flex;
@@ -188,7 +187,7 @@ a {
     border: 1px solid #f2f2f2;
     font-family: 'Raleway';
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.4em;
     width: 220px;
     height: 49.5px;
     padding-left: 15px;
@@ -204,7 +203,7 @@ input::placeholder {
     font-family: 'Raleway';
     color: rgb(255, 255, 255);
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.4em;
     border: none;
     height: 49.5px;
     width: 130px;
@@ -214,6 +213,8 @@ input::placeholder {
     left: 265px;
 }
 
+/* Éléments cachés en version desktop */
+
 .magnifying-glass_container {
     visibility: hidden;
 }
@@ -222,7 +223,7 @@ input::placeholder {
     visibility: hidden;
 }
 
-/* Mobile - Mise en place du formulaire de recherche */
+/* RESPONSIVE MOBILE - HEADER - FORMULAIRE DE RECHERCHE */
 
 @media screen and (max-width: 768px) {
     .form {
@@ -236,13 +237,14 @@ input::placeholder {
         border: 1px solid #f2f2f2;
         font-family: 'Raleway';
         font-weight: 600;
-        font-size: 1em;
         width: 220px;
     }
 
     .search_button {
         visibility: hidden;
     }
+
+/* Changement d'apparence du bouton bleu */
 
     .magnifying-glass_container {
         visibility: visible;
@@ -262,17 +264,17 @@ input::placeholder {
     .fa-magnifying-glass {
         visibility: visible;
         color: rgb(255, 255, 255);
-        font-size: 1em;
+        font-size: 1.3em;
     }
 }
 
-/* Desktop - Mise en place des filtres */
+/* DESKTOP - HEADER - FILTRES */
 
 .filters {
     display: flex;
     margin-left: 50px;
     margin-top: 20px;
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: 600;
     width: 850px;
 }
@@ -308,7 +310,7 @@ input::placeholder {
 .familial_text,
 .romantic_text,
 .pet_text {
-    padding-bottom: 10px 0;
+    padding-bottom: 0;
 }
 
 .fa-money-bill-wave,
@@ -340,7 +342,7 @@ input::placeholder {
     border-left: none;
 }
 
-/*Tablette - Mise en place des filtres */
+/* RESPONSIVE TABLETTE - HEADER - FILTRES */
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
 
@@ -350,11 +352,12 @@ input::placeholder {
         align-items: center;
         margin: 0 auto;
         margin-top: 20px;
-        font-size: 1em;
         font-weight: 600;
         width: 850px;
     }
 }
+
+/* RESPONSIVE INTERMÉDIAIRE - HEADER - FILTRES */
 
 @media screen and (max-width: 880px) and (min-width: 769px) {
 
@@ -364,7 +367,6 @@ input::placeholder {
         align-items: center;
         margin: 0 auto;
         margin-top: 20px;
-        font-size: 1em;
         font-weight: 600;
         width: 850px;
     }
@@ -374,39 +376,41 @@ input::placeholder {
         height: 120px;
         display: flex;
         justify-content: space-around;
-        align-items: space-between;
+        align-items: center;
         flex-wrap: wrap;
         margin-left: 20px;
     }
+    
 }
 
 
-/* Mobile - Mise en place des filtres */
+/* RESPONSIVE MOBILE - HEADER - FILTRES */
 
 @media screen and (max-width: 768px) {
     .filters {
         flex-direction: column;
         margin-left: 20px;
-        width: 60%;
+        width: 65%;
     }
 
     .filters_container {
         flex-wrap: wrap;
         justify-content: space-between;
         margin-left: 0;
-        width: 320px;
+        width: 330px;
         height: 180px;
     }
 }
 
 
-/* Desktop - Mise en place du message d'information */
+/* DESKTOP - HEADER - MESSAGE D'INFORMATION */
 
 .info {
     display: flex;
     align-items: center;
     margin-left: 50px;
     margin-top: 20px;
+    font-size: 1.3em;
 }
 
 .info_icon {
@@ -424,7 +428,7 @@ input::placeholder {
     color: #0065FC;
 }
 
-/* Tablette - Mise en place du message d'information */
+/* RESPONSIVE TABLETTE - HEADER - MESSAGE D'INFORMATION */
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
 
@@ -434,18 +438,19 @@ input::placeholder {
     }
 }
 
-/* Mobile - Mise en place du message d'information */
+/* RESPONSIVE MOBILE - HEADER - MESSAGE D'INFORMATION */
 
 @media screen and (max-width: 768px) {
 
     .info {
         margin-left: 20px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 }
 
+/* ----------- CORPS DE LA PAGE ---------- */
 
-/* Desktop - Mise en place de la section 1*/
+/* DESKTOP - SECTION 1 */
 
 .section_1 {
     display: flex;
@@ -454,12 +459,12 @@ input::placeholder {
 }
 
 .section_1 h2 {
-    font-size: 21px;
+    font-size: 1.8em;
     margin-bottom: 25px;
 }
 
 
-/* Desktop - Mise en place des cards hébergements de la section 1 */
+/* DESKTOP - SECTION 1 - HÉBERGEMENTS MARSEILLE */
 
 .hebergements_Marseille {
     background-color: #f2f2f2;
@@ -493,7 +498,8 @@ input::placeholder {
 }
 
 .card_hotel:hover {
-    box-shadow: 4px 4px 8px #0065FC;
+    box-shadow: 6px 6px 20px rgb(195, 195, 195);
+    transition: 0.3s;
 }
 
 .imgcard1,
@@ -539,7 +545,7 @@ input::placeholder {
 }
 
 
-/* Desktop - Mise en place de la partie de droite de la section 1 (Les plus populaires) */
+/* DESKTOP - SECTION 1 - LES PLUS POPULAIRES */
 
 .hebergements_populaires {
     background-color: #f2f2f2;
@@ -585,6 +591,11 @@ input::placeholder {
     padding: 4px;
 }
 
+.card_populaire:hover {
+    box-shadow: 6px 6px 20px rgb(195, 195, 195);
+    transition: 0.3s;
+}
+
 .imgcard7,
 .imgcard8,
 .imgcard9 {
@@ -618,7 +629,7 @@ input::placeholder {
     margin-top: 0;
 }
 
-/* Desktop intermédiaire - Section 1 et Section 2*/
+/* RESPONSIVE INTERMÉDIAIRE - SECTION 1 & SECTION 2 */
 
 @media screen and (max-width: 1204px) and (min-width: 992px) {
 
@@ -631,7 +642,7 @@ input::placeholder {
     }
 }
 
-/* Tablette - Section 1 */
+/* RESPONSIVE TABLETTE - SECTION 1 */
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
 
@@ -641,7 +652,7 @@ input::placeholder {
         font-size: 1em;
     }
 
-/* Tablette - Section 1 - Les plus populaires */
+/* RESPONSIVE TABLETTE - SECTION 1 - LES PLUS POPULAIRES */
 
     .contain_blackstar {
         display: flex;
@@ -703,7 +714,7 @@ input::placeholder {
         color: rgb(0, 0, 0);
     }
 
-    /* Tablette - Section 1 - Hébergements à Marseille */
+/* RESPONSIVE TABLETTE - SECTION 1 - HÉBERGEMENTS MARSEILLE */
 
     .hebergements_Marseille {
         order: 2;
@@ -731,7 +742,7 @@ input::placeholder {
     }
 }
 
-/* Tablette intermédiaire - Section 1 - Hébergements à Marseille */
+/* RESPONSIVE TABLETTE INTERMÉDIAIRE - SECTION 1 - HÉBERGEMENTS MARSEILLE */
 
 @media screen and (min-width: 769px) and (max-width: 880px) {
     .hebergements_Marseille h3 {
@@ -740,7 +751,7 @@ input::placeholder {
 }
 
 
-/* Mobile - Section 1 */
+/* RESPONSIVE MOBILE - SECTION 1 */
 
 @media screen and (max-width: 768px) {
 
@@ -755,7 +766,7 @@ input::placeholder {
     }
 
 
-/* Mobile - Section 1 - Les plus populaires */
+/* RESPONSIVE MOBILE - SECTION 1 - LES PLUS POPULAIRES */
 
 
     .contain_blackstar {
@@ -764,33 +775,38 @@ input::placeholder {
     }
 
     .hebergements_populaires {
-        width: 79%;
+        width: 100%;
         height: 590px;
         order: 1;
         border-radius: 0;
         background-color: #f2f2f2;
-        margin-left: 0;
+        margin: 0;
         margin-top: 20px;
-        padding: 20px;
+        padding-bottom: 40px;
         flex: none;
         justify-content: space-around;
+        
     }
 
     .titre_populaires {
         margin-bottom: 10px;
+        margin: 0 auto;
+        width: 330px;
     }
 
     .x3cards {
+        width: 100%;
         flex-direction: column;
         justify-content: space-between;
     }
 
     .card_populaire {
-        width: 350px;
+        width: 330px;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
         box-shadow: 4px 4px 8px rgb(217, 217, 217);
         padding: 4px;
+        margin: 0 auto;
     }
 
     .description_populaire {
@@ -813,18 +829,19 @@ input::placeholder {
         color: rgb(0, 0, 0);
     }
 
-/* Mobile - Section 1 - Hébergements à Marseille */
+/* RESPONSIVE MOBILE - SECTION 1 - HÉBERGEMENTS MARSEILLE */
 
     .hebergements_Marseille {
         order: 2;
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
         background-color: rgb(255, 255, 255);
-        width: 79%;
         height: 100%;
-        margin-top: 0;
-        padding: 20px;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 0;
         border-radius: 0;
-        flex: none;
     }
 
     .liste_hotels {
@@ -835,8 +852,9 @@ input::placeholder {
     }
 
     .card_hotel {
-        width: 100%;
+        width: 330px;
         height: 200px;
+        margin: 0 auto;
     }
 
     .description_hotel {
@@ -872,19 +890,7 @@ input::placeholder {
     }
 }
 
-@media screen and (min-width: 510px) and (max-width: 768px) {
-
-    .hebergements_populaires,
-    .hebergements_Marseille,
-    .section_2,
-    .cards {
-        width: 400px;
-        margin: 0 auto;
-    }
-
-}
-
-/* Desktop - Section 2 - Activités à Marseille */
+/* DESKTOP - SECTION 2 - ACTIVITÉS MARSEILLE */
 
 .section_2 {
     margin: 3% 3.5% 3.5% 3.5%;
@@ -946,6 +952,11 @@ input::placeholder {
     height: 100%;
 }
 
+.card_simple:hover, .mini_card1:hover, .mini_card2:hover, .mini_card3:hover, .mini_card4:hover {
+    box-shadow: 6px 6px 20px rgb(195, 195, 195);
+    transition: 0.3s;
+}
+
 .imgcard10,
 .imgcard13 {
     width: 100%;
@@ -973,7 +984,7 @@ input::placeholder {
     border-top-left-radius: 15px;
 }
 
-/* Desktop intermédiaire - Section 2 - Activités à Marseille */
+/* DESKTOP INTERMÉDIAIRE - SECTION 2 - ACTIVITÉS MARSEILLE */
 
 @media screen and (max-width: 1204px) and (min-width: 992px) {
 
@@ -982,7 +993,7 @@ input::placeholder {
     }
 }
 
-/* Tablette - Section 2 - Activités à Marseille */
+/* RESPONSIVE TABLETTE - SECTION 2 - ACTIVITÉS MARSEILLE */
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
 
@@ -1052,14 +1063,19 @@ input::placeholder {
     }
 }
 
-/* Mobile - Section 2 - Activités à Marseille */
+/* RESPONSIVE MOBILE - SECTION 2 - ACTIVITÉS MARSEILLE */
 
 @media screen and (max-width: 768px) {
 
     .section_2 {
         margin: 0;
         padding: 20px;
-        width: 79%;
+        width: 100%;
+    }
+
+    .section_2 h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
     }
 
     .section_2 h3 {
@@ -1111,8 +1127,10 @@ input::placeholder {
     }
 }
 
+/* ---------- FOOTER ---------- */
 
-/* Desktop - Mise en place du footer */
+
+/* DESKTOP - FOOTER */
 
 footer {
     width: 100%;
@@ -1124,6 +1142,7 @@ footer {
     padding-top: 25px;
     padding-bottom: 40px;
     margin-top: 15px;
+    font-size: 1.3em;
 }
 
 footer h2 {
@@ -1148,7 +1167,7 @@ footer li {
     list-style-type: none;
 }
 
-/* Tablette - Mise en place du footer */
+/* RESPONSIVE TABLETTE - FOOTER */
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
 
@@ -1167,31 +1186,21 @@ footer li {
 }
 
 
-/* Mobile - Mise en place du footer */
+/* RESPONSIVE MOBILE - FOOTER */
 
 @media screen and (max-width: 768px) {
 
     footer {
-        width: 79%;
+        width: 100%;
         flex-direction: column;
-        justify-content: flex-start;
-        text-align: start;
-        padding-bottom: 0;
+        align-items: center;
+        padding-bottom: 25px;
     }
 
     .a_propos,
     .nos_hebergements,
     .assistance {
-        width: 100%;
+        width: 70%;
         margin-left: 0;
-    }
-}
-
-@media screen and (min-width: 510px) and (max-width: 768px) {
-
-    footer {
-        width: 400px;
-        margin: 0 auto;
-        padding-right: 40px;
     }
 }
