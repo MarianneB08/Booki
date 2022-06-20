@@ -150,8 +150,6 @@ a {
 @media screen and (max-width: 768px) {
 
     .slogan {
-        /*width: 100%;
-        word-break: break-all;*/
         margin-left: 20px;
     }
 
@@ -894,6 +892,10 @@ input::placeholder {
 
 .section_2 {
     margin: 3% 3.5% 3.5% 3.5%;
+}
+
+.section_2 h2 {
+    font-size: 1.8em;
 }
 
 .section_2 h3 {
