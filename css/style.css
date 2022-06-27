@@ -353,7 +353,6 @@ input::placeholder {
         margin: 0 auto;
         margin-top: 20px;
         font-weight: 600;
-        /*width: 850px;*/
     }
 }
 
@@ -379,7 +378,6 @@ input::placeholder {
         flex-wrap: wrap;
         margin-left: 20px;
     }
-    
 }
 
 
@@ -647,6 +645,7 @@ input::placeholder {
 
     .section_1 {
         width: 100%;
+        height: 2650px;
         flex-direction: column;
         margin: 0 auto;
         font-size: 1em;
@@ -661,7 +660,7 @@ input::placeholder {
 
     .hebergements_populaires {
         width: 100%;
-        height: 590px;
+        height: 630px;
         order: 1;
         border-radius: 0;
         background-color: #f2f2f2;
@@ -681,6 +680,7 @@ input::placeholder {
 
     .x3cards {
         width: 100%;
+        height: 100%;
         margin: 0 auto;
         flex-direction: column;
         justify-content: space-between;
@@ -689,6 +689,7 @@ input::placeholder {
 
     .card_populaire {
         width: 100%;
+        height: 100%;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
         box-shadow: 4px 4px 8px rgb(217, 217, 217);
@@ -699,6 +700,11 @@ input::placeholder {
         font-size: 14px;
         margin-left: 20px;
         margin-right: 15px;
+    }
+
+    .imgcard7, .imgcard8, .imgcard9 {
+        height: 150px;
+
     }
 
     .price_and_rating {
@@ -731,7 +737,7 @@ input::placeholder {
         width: 100%;
         height: auto;
         flex-direction: column;
-        align-items: space-between;
+        /*align-items: space-between;*/
         margin: 0 auto;
         margin-top: 20px;
         padding: 20px;
@@ -741,19 +747,25 @@ input::placeholder {
     .liste_hotels {
         flex-direction: column;
         width: 100%;
-        height: 1240px;
+        height: 1800px;
         flex-wrap: nowrap;
     }
 
     .card_hotel {
         width: 100%;
-        height: 200px;
+        height: 280px;
         margin: 0 auto;
     }
 
     .description_hotel {
         font-size: 14px;
         margin-left: 20px;
+    }
+
+    .imgcard1, .imgcard2, .imgcard3, .imgcard4, .imgcard5, .imgcard6 {
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
     }
 
     .description_hotel h3 {
@@ -1053,7 +1065,8 @@ input::placeholder {
     .section_2 {
         margin: 0;
         padding: 0;
-        width: 100%;
+        width: 95%;
+        height: 1660px;
         margin: 0 auto;
         margin-bottom: 30px;
         border-radius: 15px;
@@ -1072,10 +1085,9 @@ input::placeholder {
     .cards {
         flex-direction: column;
         justify-content: space-between;
-        height: 1360px;
-        width: 60%;
-        margin: 0 auto;
+        width: 100%;
         margin-bottom: 25px;
+        height: 1600px;
     }
 
     .card_double {
@@ -1092,7 +1104,7 @@ input::placeholder {
     .mini_card2,
     .mini_card3,
     .mini_card4 {
-        height: 200px;
+        height: 250px;
         flex: none;
     }
 
@@ -1102,13 +1114,14 @@ input::placeholder {
     .imgcard13,
     .imgcard14,
     .imgcard15 {
-        height: 70%;
+        height: 200px;
+        object-fit: cover;
     }
 }
 
 /* RESPONSIVE MOBILE - SECTION 2 - ACTIVITÉS MARSEILLE */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
 
     .section_2 {
         margin: 0;
@@ -1164,7 +1177,6 @@ input::placeholder {
 }
 
 /* ---------- FOOTER ---------- */
-
 
 /* DESKTOP - FOOTER */
 
